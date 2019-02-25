@@ -1,0 +1,238 @@
+// @import url('https://pro.fontawesome.com/releases/v5.1.0/css/all.css');
+//@import url('../css/bootstrap.min.css');
+//@import url('../css/normalize.css');
+
+.fade-enter, .fade-exit {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active, .fade-exit-active {
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+@import url('../css/bootstrap.min.css');
+@import url('../css/font.css');
+@import url('../css/fontawesome-all.css');
+
+@import 'responsive';
+
+$primary: #28a745;
+
+.btn-rounded {
+	border-radius: 50px;
+}
+
+body {
+	font-family: Roboto;
+}
+
+/* Pre definitions */
+
+/* Header */
+
+header#header {
+	margin-top: 5rem;
+	box-sizing: border-box;
+	display: block;
+}
+
+/* Navbar menu */
+.navbar {
+	.nav-item {
+		padding: 0 10px;
+		a {
+			color: #444;
+			&.router-link-active {
+				color: $primary;
+			}
+		}
+	}
+	.navbar-text {
+		a {
+			padding: 0 1rem;
+			color: #444;
+		}
+	}
+}
+/* Logo */
+
+a.logo {
+	font-family: "Brothers Regular";
+	font-size: 31px;
+	margin-top: -10px;
+	margin-left: -15px;
+	display: block;
+	&:link, &:visited, &:active {
+		color: #3D3D3D;
+		text-decoration: none;
+	}
+}
+
+/* CATEGORY */
+ul.category {
+	font-size: 14px;
+	margin-top: 50px;
+	li {
+		padding: 1rem 3rem;
+		a {
+			padding: 5px 0;
+			&:link, &:visited, &:active {
+				color: #444;
+			}
+			&:hover, &:active {
+				color: var(--green);
+			}
+			&.active {
+				font-weight: bold;
+				color: var(--green);
+				border-bottom: 2px solid var(--green);
+			}
+		}
+	}
+}
+
+.portfolio {
+	margin-top: 54px;
+	.portfolio--item {
+		height: 300px;
+		margin-bottom: 30px;
+		position: relative;
+		.card {
+			width: 100%;
+			height: 300px;
+			border-radius: 0;
+			border: none;
+			position: relative;
+			overflow: hidden;
+		}
+		&:hover .portfolio--hover {
+			opacity: 1;
+			visibility: visible;
+		}
+		.portfolio--hover {
+			background-color: rgba(0, 0, 0, 0.5);
+			width: 100%;
+			height: 100%;
+			background-repeat: 6px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.8s linear;
+			h1 {
+				font: 32px 'Roboto';
+				width: 100%;
+				color: #fff;
+				text-align: center;
+				position: absolute;
+				top: 50px;
+				left: 0;
+				right: 0;
+			}
+			a {
+				text-align: center;
+				margin: auto;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 25px;
+				&:link, &:visited, &:active {
+					font: 16px 'Roboto';
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+footer#footer {
+	font-size: 14px;
+	margin: 50px 0;
+}
+
+.jumbotron {
+	background-color: transparent;
+}
+
+#contact, #about-me {
+	margin-top: 3rem;
+	form {
+		margin-top: 2rem;
+		label {
+			font-weight: bold;
+		}
+		input, textarea {
+			padding: 25px 15px;
+			border-radius: 15px;
+			border-width: 2px;
+		}
+		textarea {
+			padding: 15px;
+		}
+	}
+}
+#about-me {
+	.about {
+		margin-top: 30px;
+	}
+	.skills {
+		margin: 10px 0 2rem 0;
+		.badge {
+			border-radius: 50px;
+			margin-right: 3px;
+			margin-top: 5px;
+			padding: 7px 10px;
+
+			background-color: #fff;
+			box-shadow: inset 0 0 0 2px $primary;
+			color: $primary;
+			text-transform: uppercase;
+			transition: 0.2s ease;
+
+			&:hover {
+				background-color: $primary;
+				box-shadow: none;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.zoom-enter-active,
+.zoom-leave-active {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: zoom;
+}
+
+.zoom-leave-active {
+  animation-direction: reverse;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
